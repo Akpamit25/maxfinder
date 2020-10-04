@@ -1,6 +1,7 @@
 
 package com.maximum;
 
+
 import org.junit.Before;
 import org.junit.Test;
 
@@ -15,7 +16,7 @@ public class MaximumTest {
 		max = new Maximum();
 	}
 
-	@Test
+//INTEGER TEST	@Test
 	public void givenMaxNumber_At1stPosition_ReturnNumber() {
 		Assert.assertEquals(new Integer(3), max.findMaximumInteger(new Integer[] {3,2,1}));		
 	}	
@@ -28,7 +29,7 @@ public class MaximumTest {
 		Assert.assertEquals(new Integer(5), max.findMaximumInteger(new Integer[] {3,4,5}));		
 	}
 	
-	
+//FLOAT TEST	
 	@Test
 	public void givenMaxFloat_At1stPosition_ReturnFloat() {
 		Assert.assertEquals(new Float(3f), max.findMaximumFloat(new Float[] {3f,2f,1f}));		
@@ -42,4 +43,17 @@ public class MaximumTest {
 		Assert.assertEquals(new Float(5f), max.findMaximumFloat(new Float[] {3f,4f,5f}));		
 	}
 
+//STRING TEST
+	@Test
+	public void givenMaxString_At1stPosition_ReturnString() {
+		Assert.assertEquals(new String("Cherries"), max.findMaximumString(new String[] {"Cherries","Banana","Apple"}));		
+	}	
+	@Test
+	public void givenMaxString_At2ndPosition_ReturnString() {
+		Assert.assertEquals(new String("Grapefruit"), max.findMaximumString(new String[] {"Cherries","Grapefruit","Apple"}));		
+	}
+	@Test
+	public void givenMaxString_At3rdPosition_ReturnString() {
+		Assert.assertEquals(new String("Kiwi"), max.findMaximumString(new String[] {"Cherries","Banana","Kiwi"}));		
+	}
 }
